@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shipping calculator</title>
+    </head>
+    <body>
+        <p>Shipping Calculator</p>
+        <p>Anything under 200 have shipping charges.</p>
+        <p>Above 200 have no shipping charges.</p>
+        <p>Above 500 have 10% discount.</p>
+        <input placeholder="Cost of Order" onkeydown="
+        enter(event);
+        ">
+        <button onclick="
+        calculate();
+        ">Calculate</button>
+        <p class="total"></p>
+        <script>
+function calculate(){
+    let cost = Number(document.querySelector('input').value);
+    if(cost < 200){
+        cost += 40;
+    }else if(cost > 500){
+        cost = cost - cost/10;
+    }
+    document.querySelector('.total').innerHTML = `Rs ${cost}`;
+}
+function enter(event){
+    if(event.key === 'Enter'){
+        calculate();
+    }
+}
+        </script>
+    </body>
+</html>
