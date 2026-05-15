@@ -1,0 +1,15 @@
+body {
+        font-family: Arial;
+      }
+      input {
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+      button {
+        padding: 10px;
+        background-color: rgb(63, 235, 63);
+        font-size: medium;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
