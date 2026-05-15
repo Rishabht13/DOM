@@ -2,6 +2,26 @@
 <html>
     <head>
         <title>DOM</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+            button{
+                background-color: black;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 40px;
+                border: 0cap;
+                font-weight: bold;
+
+            }
+            .newButton{
+                background-color: red;
+                font-weight: bold;
+
+            }
+        </style>
     </head>
     <body>
         <p>Youtube Subscribe Button </p>
@@ -15,8 +35,10 @@
                 const buttonVar = document.querySelector('button');
                 if(buttonVar.innerText === 'Subscribe'){
                     buttonVar.innerText = 'Subscribed';
+                    buttonVar.classList.add('newButton');
                 }else{
                     buttonVar.innerText = 'Subscribe';
+                    buttonVar.classList.remove('newButton');
                 }
             }
         </script>
