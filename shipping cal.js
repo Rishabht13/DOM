@@ -16,7 +16,7 @@ function calculate() {
     cost = cost - cost / 10;
   }
 
-  document.querySelector(".total").innerHTML = `Rs   ${cost}`;
+  document.querySelector(".total").innerHTML = ` Total Price : Rs   ${cost}`;
   let button = document.querySelector("button");
   if (button.innerText === "Calculate") {
     button.innerText = "Reset";
